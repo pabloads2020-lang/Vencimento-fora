@@ -101,7 +101,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   --border-topbar: #2a2e3f;
   --text-topbar: #e1e3ef;
   --text2-topbar: #9a9eb8;
-  --text3-topbar: #888eaa;
+  --text3-topbar: #5c6080;
   --gold-topbar: #f5c842;
   --amber-topbar: #e0ac2c;
   font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
@@ -125,7 +125,7 @@ body.light .hub-topbar {
   --border-topbar: #d4d8e2;
   --text-topbar: #1a1d2e;
   --text2-topbar: #4a4f6a;
-  --text3-topbar: #646b88;
+  --text3-topbar: #8a90a8;
   --gold-topbar: #b8860b;
   --amber-topbar: #c47d00;
   background: #ffffff;
@@ -178,17 +178,13 @@ body.light .hub-topbar {
   font-weight: 500;
   padding: 5px 10px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: border-color .15s, color .15s, background .15s;
   white-space: nowrap;
 }
 .hub-back-btn:hover, .hub-newtab-btn:hover {
   border-color: var(--amber-topbar);
   color: var(--gold-topbar);
   background: var(--bg-topbar);
-}
-.hub-back-btn .material-symbols-outlined,
-.hub-newtab-btn .material-symbols-outlined {
-  font-size: 16px;
 }
 .hub-active-tool {
   font-size: 15px;
@@ -251,11 +247,7 @@ body.light .hub-theme-btn .hub-theme-knob {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 @media (max-width: 600px) {
-  .hub-back-btn span:not(.material-symbols-outlined),
-  .hub-newtab-btn span:not(.material-symbols-outlined) {
-    display: none;
-  }
-  .hub-back-btn, .hub-newtab-btn { padding: 5px 8px; }
+  .hub-back-btn, .hub-newtab-btn { padding: 5px 8px; font-size: 11px; }
   .hub-active-tool {
     font-size: 13px;
     max-width: 160px;
@@ -976,7 +968,7 @@ body.light .badge-far {
           <div class="kpi-value is-accent" id="kpiValor">R$ 0</div>
         </div>
         <div class="kpi-cell">
-          <div class="kpi-label">Vencem em 2 dias</div>
+          <div class="kpi-label">Vencem em ≤ 2 dias</div>
           <div class="kpi-value is-danger" id="kpiUrgent">0</div>
         </div>
         <div class="kpi-cell">
